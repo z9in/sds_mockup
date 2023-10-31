@@ -97,6 +97,11 @@ main {
 main > .school_name {
     margin-bottom: 30px;
 }
+.mainWrap {
+    width: 100%;
+    height: calc(100% - 80px);
+    outline: 1px solid blue;
+}
 .content {
     outline: 1px solid red;
 }
