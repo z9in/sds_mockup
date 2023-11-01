@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDS_학생관리</title>
+    <link rel="stylesheet" href="../css/information.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="logo">
+                   <a href="../html/main.html">
+                    <img src="../images/logo.png" alt="logo">                    
+                   </a>
+            </div>
+            <nav>
+                <ul class="depth1">
+                    <li><a href="../html/infomation.html">학생관리</a></li>
+                    <li><a href="#">출입확인</a></li>
+                    <li><a href="#">상벌점관리</a></li>
+                    <li><a href="#">외출외박관리</a></li>
+                    <li><a href="#">기숙사생활관리</a></li>
+                    <li><a href="#">학생보건관리</a></li>
+                    <li><a href="#">자기주도학습실</a></li>
+                    <li><a href="#">시스템관리</a></li>
+                </ul>
+            </nav>
+            <div class="welcome">
+                <h6>안녕하세요</h6>
+                <h6 class="username">
+                    홍길동님
+                </h6>
+            </div>
+            <button class="log_out">로그아웃</button>
+        </header>
+        <main>
+            <form class="infor_search" action="#" method="post">
+                <div class="infor_items">
+                    <h5>검색조건</h5>
+                    <div class="infor_itemBox">
+                        <button class="infor_picUpload_btn">사진업로드</button>
+                        <button class="infor_excelUpload_btn">엑셀업로드</button>
+                        <button class="infor_search_btn">조회</button>
+                        <button class="infor_create_btn">등록</button>
+                        <button class="infor_download_btn">엑셀</button>
+                    </div>                    
+                </div>
+                <div class="infor_condition">
+                    <label for="infor_school">학교
+                        <select name="infor_school" id="infor_school_name">
+                            <option value="테스트학교">테스트학교</option>
+                        </select>
+                    </label>
+                    <label for="infor_years">학년
+                        <select name="infor_year" id="infor_years">
+                            <option value="1학년">1학년</option>
+                            <option value="2학년">2학년</option>
+                            <option value="3학년">3학년</option>
+                        </select>
+                    </label>
+                    <label for="infor_class">반
+                        <select name="infor_year" id="infor_years">
+                            <option value="1반">1반</option>
+                            <option value="2반">2반</option>
+                            <option value="3반">3반</option>
+                            <option value="4반">3반</option>
+                            <option value="5반">3반</option>
+                        </select>
+                    </label>
+                    <label for="infor_district">동
+                        <select name="infor_district" id="infor_district">
+                            <option value="남학생동">남학생동</option>
+                            <option value="여학생동">여학생동</option>
+                        </select>
+                    </label>
+                    <label for="infor_room">호실
+                        <select name="infor_district" id="infor_district">
+                            <option value="1호실">1호실</option>
+                            <option value="2호실">2호실</option>
+                        </select>
+                    </label>
+                    <label for="infor_join">동
+                        <select name="infor_join" id="infor_join">
+                            <option value="입사">입사</option>
+                            <option value="퇴사">퇴사</option>
+                        </select>
+                    </label>
+                    <label class="infor_student_number" for="infor_student_number">학생번호
+                        <input type="text" name="infor_student_number" id="infor_student_number">    
+                    </label>
+                    
+                    <label for="infor_student_name">학생
+                        <input type="text" name="infor_student_name" id="infor_student_namer">
+                    </label>
+                </div>
+            </form>
+            <div class="infor_output">
+                <div class="infor_output_title">
+                    <h5>학생 리스트</h5>
+                </div>
+                <div class="infor_output_list">
+                    <table>
+                        <tr>
+                            <th>순번</th>
+                            <th>학교</th>
+                            <th>학생ID</th>
+                            <th>학생번호</th>
+                            <th>입학년도</th>
+                            <th>성별</th>
+                            <th>학년</th>
+                            <th>반</th>
+                            <th>동</th>
+                            <th>호실</th>
+                            <th>학생연락처</th>
+                            <th>이미지</th>
+                            <th>구분</th>
+                            <th>바코드</th>
+                            <th>RFID</th>
+                            <th>등록자</th>
+                            <th>등록일시</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>테스트학교</td>
+                            <td>202310217</td>
+                            <td>10217</td>
+                            <td>2023</td>
+                            <td>남</td>
+                            <td>1학년</td>
+                            <td>2반</td>
+                            <td>남자기숙사</td>
+                            <td>201호</td>
+                            <td>010-8618-0735</td>
+                            <td>없음</td>
+                            <td>입사</td>
+                            <td>010151458</td>
+                            <td>a35f18d38</td>
+                            <td>관리자</td>
+                            <td>2023.11.01.14:00</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="copyright">
+                <h5>Copyright Smcop All Rights Reserves</h5>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
