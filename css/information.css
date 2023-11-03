@@ -2,6 +2,7 @@
 *{
     margin: 0;
     border: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: 'Noto Sans KR', sans-serif;
 }    
@@ -27,6 +28,7 @@ header {
     justify-content: space-between;
     align-items: center;
     border: 1px solid #ccc;
+    position: relative;
 }
 .logo {
     /* outline: 1px solid red; */
@@ -41,7 +43,10 @@ header {
 }
 nav {
     /* outline: 1px solid red; */
-    width: 60%;
+    position: absolute;
+    margin-left: 10%;
+    /* margin-top: 3px; */
+    width: 71%;
     height: 50px;
     font-weight: 700;
     
@@ -50,11 +55,47 @@ nav {
     /* outline: 1px solid red; */
     width: 100%;
     height: 100%;
-    display: flex;
+    display: flex;;
+    flex-wrap: nowrap;
     justify-content: space-around;
     align-items: center;
 }
+.depth1 > li {
+    width: 11%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    height: 25px;
+    background-color: #fff;
+    overflow: hidden;
+}
+.depth1 > li:hover {
+    overflow: visible;
+}
+.depth1 > li > .depth2 {
+    width: 100%;
+    height: 1000px;
+    background-color: white;
+}
+.depth1 > li >.depth2 > li {
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    background-color: white;
+    font-size: 14px;
+    font-weight: 600;
+    /* outline: 1px solid black;     */
+}
+.depth1 > li >.depth2 > li > a:hover {
+    text-decoration: underline;
+    background-color: white;
+}
 .welcome {
+    position: absolute;
+    margin-left: 83%;
+    margin-top: 5px;
     font-size: 24px;
     display: flex;
     align-items: center;
@@ -69,6 +110,7 @@ nav {
 }
 .log_out {
     margin-right: 50px;
+    margin-top: 5px;
     width: 100px;
     height: 30px;
     background-color: red;

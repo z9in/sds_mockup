@@ -134,11 +134,10 @@ main {
     width: 100%;
     height: calc(100% - 120px);
     background-color: #efefef;
-    padding-top: 15px;
+    padding: 30px 50px;    
 }
 main > .school_name {
-    margin-left: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 .mainWrap {
     width: 100%;
@@ -147,22 +146,124 @@ main > .school_name {
     flex-wrap: wrap;
     justify-content:space-between;
     align-items: center;
-    padding: 0 30px;
+    
+}
+main > .infor_search {
+    width: 100%;
+    height: 20%;
+    border: 1px solid #bbb;
     background-color: #fff;
+}
+main > .infor_search > .infor_items {
+    width: 100%;
+    height: 30%;
+    padding: 0 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #bbb;
+}
+.infor_items > .infor_itemBox {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     
 }
-.content {
-    width: 33%;
-    height: 40%;
+.infor_items > .infor_itemBox > button {
+    height: 30px;    
+    font-weight: 700;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    cursor: pointer;
+}
+.infor_items > .infor_itemBox > .infor_search_btn {
+    width: 70px;
+    border-radius: 10px;
+}
+.infor_items > .infor_itemBox > .infor_save_btn {
+    width: 70px;
+    border-radius: 10px;
+}
+.infor_search > .infor_condition {
+    width: 100%;
+    height: 70%;
+    padding: 10px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    
+
+}
+.infor_search > .infor_condition > label {
+    width: 250px;
+    height: 35px;
+    margin-right: 40px;
+    display: flex;
+    align-items: center;
     
 }
-table, tr, td, th {
-    border-collapse: collapse;
-    border: 1px solid #ccc;
-    text-align: center;
+.infor_search > .infor_condition > label > select {
+    width: 200px;
+    height: 100%;
+    margin-left: 7px;
+    border: 2px solid #ccc;
+} 
+.infor_search > .infor_condition > label > input {
+    width: 200px;
+    height: 100%;
+    margin-left: 5px;
+    border: 2px solid #ccc;
 }
-table {
-    margin-top: 10px;
+.infor_search > .infor_condition > .infor_student_number {
+    width: 16%;
+    margin-right: 10px;
+}
+.infor_output {
+    margin-top: 15px;
     width: 100%;
     height: 80%;
+    display: flex;
+
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+.infor_output > .teacher_output {
+    /* outline: 1px solid red; */
+    width: 25%;
+    height: 100%;
+    overflow: scroll;
+}
+.infor_output_title {
+    width: 100%;
+    height: 5%;
+    padding-left: 35px;
+    padding-top: 6px;
+    border-bottom: 2px solid #ccc;
+}
+.teacher_output > .teacher_output_list {
+    width: 100%;
+    margin-top: 10px;
+    
+}
+.student_output {
+    width: 75%;
+    height: 100%;
+    overflow: scroll;
+}
+.student_output > .student_list {
+    width: 100%;
+    margin-top: 10px;
+}
+.infor_output table {
+    width: 98%;
+    margin: 0 1%;
+    border: 1px solid #ccc;
+}
+.infor_output table, th, td, tr {
+    height: 40px;
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    text-align: center;
 }
