@@ -35,7 +35,7 @@
                     <li><a href="#">출입확인</a>
                         <ul class="depth2">
                             <li>
-                                <a href="#">출입기록관리</a>
+                                <a href="../html/inandout.html">출입기록관리</a>
                             </li>
                             <li>
                                 <a href="#">인원점검현황</a>
@@ -187,11 +187,15 @@
                 <div class="infor_items">
                     <h5>검색조건</h5>
                     <div class="infor_itemBox">
-                        <button class="infor_picUpload_btn">사진업로드</button>
-                        <button class="infor_excelUpload_btn">엑셀업로드</button>
-                        <button class="infor_search_btn">조회</button>
-                        <button class="infor_create_btn">등록</button>
-                        <button class="infor_download_btn">엑셀</button>
+                        <button 
+                        type="button"
+                        class="infor_picUpload_btn">사진업로드</button>
+                        <button 
+                        type="button"
+                        class="infor_excelUpload_btn">엑셀업로드</button>
+                        <button type="button" class="infor_search_btn" onclick="open()">조회</button>
+                        <button type="button" class="infor_create_btn">등록</button>
+                        <button type="button" class="infor_download_btn">엑셀</button>
                     </div>                    
                 </div>
                 <div class="infor_condition">
@@ -248,12 +252,13 @@
                     <h5>학생 리스트</h5>
                 </div>
                 <div class="infor_output_list">
-                    <table>
+                    <table class="tables">
                         <tr>
                             <th>순번</th>
                             <th>학교</th>
                             <th>학생ID</th>
                             <th>학생번호</th>
+                            <th>학생</th>
                             <th>입학년도</th>
                             <th>성별</th>
                             <th>학년</th>
@@ -268,11 +273,12 @@
                             <th>등록자</th>
                             <th>등록일시</th>
                         </tr>
-                        <tr>
+                        <!-- <tr>
                             <td>1</td>
                             <td>테스트학교</td>
                             <td>202310217</td>
                             <td>10217</td>
+                            <td>테스트학생</td>
                             <td>2023</td>
                             <td>남</td>
                             <td>1학년</td>
@@ -286,7 +292,7 @@
                             <td>a35f18d38</td>
                             <td>관리자</td>
                             <td>2023.11.01.14:00</td>
-                        </tr>
+                        </tr> -->
                     </table>
                 </div>
             </div>
@@ -297,5 +303,6 @@
             </div>
         </footer>
     </div>
+    <script src="../js/db.js"></script>
 </body>
 </html>

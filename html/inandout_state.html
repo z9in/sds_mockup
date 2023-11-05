@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SDS_학생관리</title>
-    <link rel="stylesheet" href="../css/parents_infor.css">
+    <link rel="stylesheet" href="../css/inandout_state.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -38,7 +38,7 @@
                                 <a href="../html/inandout.html">출입기록관리</a>
                             </li>
                             <li>
-                                <a href="#">인원점검현황</a>
+                                <a href="../html/inandout_state.html">인원점검현황</a>
                             </li>
                             <li>
                                 <a href="#">입퇴실모니터링</a>
@@ -187,8 +187,12 @@
                 <div class="infor_items">
                     <h5>검색조건</h5>
                     <div class="infor_itemBox">
-                        <button type="button" class="infor_search_btn">조회</utton>
-                        <button type="button" class="infor_save_btn">저장</button>
+                        <button type="button" class="infor_screen">현황스크린</button>
+                        <button type="button" class="infor_search_btn">조회</button>
+                        <button type="button" class="infor_save_btn">확정</button>
+                        <button type="button" class="infor_newdate">생성</button>
+                        <button type="button" class="infor_excel_down">엑셀</button>
+                        
                     </div>                    
                 </div>
                 <div class="infor_condition">
@@ -197,68 +201,84 @@
                             <option value="테스트학교">테스트학교</option>
                         </select>
                     </label>
-                    <label for="infor_student_num">학생번호
-                        <input type="text">
-                    </label>
-                    <label for="infor_student_name">학생
-                        <input type="text">
+                    <label for="infor_selec">확정구분
+                        <select name="infor_selec" id="infor_selec">
+                            <option value="1호실">실시간</option>
+                            <option value="2호실">확정</option>
+                        </select>
                     </label>
                 </div>
             </form>
+            <div class="total">
+                <div class="total_title">
+                    <h5>총원 리스트</h5>
+                </div>
+                <div class="total_screen">
+                    <table>
+                        <tr>
+                            <th>총원</th>
+                            <th>현재원</th>
+                            <th>외출</th>
+                            <th>외박</th>
+                            <th>기타</th>
+                        </tr>
+                        <tr>
+                            <td id="grand_total">100</td>
+                            <td id="net_num">30</td>
+                            <td id="out_today">20</td>
+                            <td id="out_tomorrow">20</td>
+                            <td id="out_anything">30</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
             <div class="infor_output">
-                <div class="students_output">
+                <div class="teacher_output">
                     <div class="infor_output_title">
-                        <h5>학생 리스트</h5>
+                        <h5>기숙사 동 리스트</h5>
                     </div>
-                    <div class="students_output_list">
+                    <div class="teacher_output_list">
                         <table>
                             <tr>
-                                <th>학생번호</th>
-                                <th>학생</th>
-                                <th>학년</th>
-                                <th>반</th>
-                                <th>배정된학부모수</th>
+                                <th>순번</th>
+                                <th>동</th>
+                                <th>총원</th>
+                                <th>현재원</th>
+                                <th>외출</th>
+                                <th>외박</th>
+                                <th>기타</th>
                             </tr>
-                            <tr>
-                                <td>10212</td>
-                                <td>테스트학생</td>
-                                <td>1학년</td>
-                                <td>2반</td>
-                                <td>1명</td>
+                            <tr class="point">
+                                <td>1</td>
+                                <td>남학생기숙사</td>
+                                <td>100</td>
+                                <td>30</td>
+                                <td>20</td>
+                                <td>20</td>
+                                <td>30</td>
                             </tr>
                         </table>
                     </div>
                 </div>
-                <div class="parents_output">
+                <div class="student_output">
                     <div class="infor_output_title">
-                        <h5>예상된 학부모 리스트</h5>
-                        <div class="btns">
-                            <button type="button">행 추가</button>
-                            <button type="button">행 삭제</button>
-                            <button type="button">행 복원</button>
-                        </div>
+                        <h5>기숙사 동별 학생 리스트</h5>
                     </div>
-                    <div class="parents_list">
+                    <div class="student_list">
                         <table>
                             <tr>
-                                <th>수정구분</th>
-                                <th>검색</th>
-                                <th>학부모ID</th>
-                                <th>학부모명</th>
-                                <th>학부모연락처</th>
-                                <th>학부모구분</th>
-                                <th>수정자</th>
-                                <th>수정일시</th>
+                                <th>호실</th>
+                                <th>학생</th>
+                                <th>학생번호</th>
+                                <th>상태</th>
+                                <th>입퇴실시간</th>
                             </tr>
-                            <tr>
-                                <td>수정</td>
-                                <td><button type="button">검색</button></td>
-                                <td>01086180735</td>
-                                <td>테스트학부모</td>
-                                <td>01086180735</td>
-                                <td>모</td>
-                                <td>관리자</td>
-                                <td>2023.11.04.11:00</td>
+                            <tr class="point">
+                                <td>101호</td>
+                                <td>테스트학생</td>
+                                <td>10214</td>
+                                <td>입소</td>
+                                <td>2023.11.01.14:00</td>
                             </tr>
                         </table>
                     </div>    
